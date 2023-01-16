@@ -1,9 +1,12 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import { COLORS, QUERIES } from '../../constants';
 
 const Breadcrumbs = ({ children }) => {
-  return <Wrapper>{children}</Wrapper>;
+  return (
+    <Wrapper>
+      {children}
+    </Wrapper>    
+  );
 };
 
 Breadcrumbs.Crumb = ({ href, children, delegated }) => {
@@ -23,17 +26,17 @@ const CrumbWrapper = styled.div`
     &::before {
       content: '/';
       margin-right: 8px;
-      color: ${COLORS.gray[300]};
+      color: var(--gray-300);
     }
   }
 `;
 
 const CrumbLink = styled.a`
-  color: ${COLORS.gray[700]};
+  color: var(--gray-700);
   text-decoration: none;
 
   &:hover {
-    color: ${COLORS.gray[900]};
+    color: var(--gray-900);
   }
 `;
 

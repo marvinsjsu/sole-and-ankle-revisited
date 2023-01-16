@@ -29,3 +29,18 @@ export const QUERIES = {
   'tabletAndDown': `(max-width: ${BREAKPOINTS.tabletMax / 16}rem)`,
   'desktopAndDown': `(max-width: ${BREAKPOINTS.desktopMax / 16}rem)`,
 };
+
+export const STYLES = {
+  '--white': COLORS.white,
+  '--primary': COLORS.primary,
+  '--secondary': COLORS.secondary,
+  '--transparent-gray': COLORS.transparentGray,
+  '--gray-100': COLORS.gray[100],
+  '--gray-300': COLORS.gray[300],
+  '--gray-500': COLORS.gray[500],
+  '--gray-700': COLORS.gray[700],
+  '--gray-900': COLORS.gray[900],
+  '--font-weight-normal': WEIGHTS.normal,
+  '--font-weight-medium': WEIGHTS.medium,
+  '--font-weight-bold': WEIGHTS.bold,
+};

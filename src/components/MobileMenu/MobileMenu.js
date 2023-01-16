@@ -3,11 +3,11 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import { DialogOverlay, DialogContent } from '@reach/dialog';
 
-import { QUERIES, COLORS } from '../../constants';
-
 import UnstyledButton from '../UnstyledButton';
 import Icon from '../Icon';
 import VisuallyHidden from '../VisuallyHidden';
+
+import { STYLES } from '../../constants';
 
 const MobileMenu = ({ isOpen, onDismiss }) => {
   if (!isOpen) {
@@ -18,10 +18,9 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
     <DialogOverlayWrapper
       isOpen={isOpen}
       onDismiss={onDismiss}
+      style={STYLES}
     >
-      <DialogContentWrapper
-        style={{ boxShadow: "0px 10px 50px hsla(0, 0%, 0%, 0.33)" }}
-      >
+      <DialogContentWrapper aria-label='mobile menu'>
         <UnstyledButtonWrapper onClick={onDismiss}>
           <Icon id='close' />
           <VisuallyHidden>
@@ -47,7 +46,7 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
 };
 
 const DialogOverlayWrapper = styled(DialogOverlay)`
-  background-color: ${COLORS.transparentGray};
+  background-color: var(--transparent-gray);
   position: absolute;
   top: 0;
   left: 0;
@@ -56,7 +55,7 @@ const DialogOverlayWrapper = styled(DialogOverlay)`
 `;
 
 const DialogContentWrapper = styled(DialogContent)`
-  background-color: ${COLORS.white};
+  background-color: var(--white);
   position: absolute;
   top: 0;
   right: 0;
@@ -71,6 +70,10 @@ const DialogContentWrapper = styled(DialogContent)`
 
 const UnstyledButtonWrapper = styled(UnstyledButton)`
   align-self: flex-end;
+
+  &:hover {
+    color: var(--secondary);
+  }
 `;
 
 const NavWrapper = styled.nav`
@@ -81,15 +84,15 @@ const NavWrapper = styled.nav`
 
 const NavLink = styled.a`
   font-size: 1.125rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-medium);
   line-height: 1.2;
-  color: ${COLORS.gray[900]};
+  color: var(--gray-900);
   text-decoration: none;
   text-transform: uppercase;
 
   &:active,
   &:hover {
-    color: ${COLORS.secondary}; 
+    color: var(--secondary); 
   }
 `;
 
@@ -101,14 +104,14 @@ const FooterWrapper = styled.footer`
 
 const FooterLink = styled.a`
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: var(--font-weight-normal);
   line-height: 1.2;
-  color: ${COLORS.gray[700]};
+  color: var(--gray-700);
   text-decoration: none;
 
   &:active,
   &:hover {
-    color: ${COLORS.secondary}; 
+    color: var(--secondary); 
   }
 `;
 
