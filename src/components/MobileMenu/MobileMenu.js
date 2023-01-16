@@ -50,7 +50,7 @@ const DialogOverlayWrapper = styled(DialogOverlay)`
   position: absolute;
   top: 0;
   left: 0;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
 `;
 
@@ -59,7 +59,7 @@ const DialogContentWrapper = styled(DialogContent)`
   position: absolute;
   top: 0;
   right: 0;
-  height: 100vh;
+  height: 100%;
   width: 300px;
   display: flex;
   flex-direction: column;
