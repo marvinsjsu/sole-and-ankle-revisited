@@ -6,6 +6,7 @@ import SuperHeader from '../SuperHeader';
 import MobileMenu from '../MobileMenu';
 import UnstyledButton from '../UnstyledButton';
 import Icon from '../Icon';
+import VisuallyHidden from '../VisuallyHidden';
 
 import { QUERIES } from '../../constants';
 
@@ -38,13 +39,18 @@ const Header = () => {
         <MobileBtns>
           <UnstyledButton>
             <Icon id="shopping-bag" strokeWidth={2} />
+            <VisuallyHidden>Shopping Cart</VisuallyHidden>
           </UnstyledButton>
           <UnstyledButton>
             <Icon id="search" strokeWidth={2} />
+            <VisuallyHidden>Search</VisuallyHidden>
           </UnstyledButton>
           <UnstyledButton onClick={onClickMobileBtn}>
             <Icon id="menu" strokeWidth={2} />
           </UnstyledButton>
+          <VisuallyHidden>
+            Menu
+          </VisuallyHidden>
         </MobileBtns>
       </MainHeader>
       <MobileMenu
